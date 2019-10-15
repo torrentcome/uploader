@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel=icon href=/favicon.png> <head>
+<meta charset="utf-8">
+<title>Single file upload</title>
+</head>
+
+<body class="w3-theme-l4">
+    <div class="w3-bar w3-large w3-theme-d4">
+      <h1>Upload single file with fields</h1>
+    </div>
+
+    <div class="w3-padding w3-display-middle">
+    <form class="w3-container" action="/upload" method="post" enctype="multipart/form-data">
+      Name: <input class="w3-input" type="text" name="name"><br>
+      Email: <input class="w3-input" type="email" name="email"><br>
+      Files: <input class="w3-input" type="file" name="file"><br><br>
+      <input class="w3-input" type="submit" value="Submit">
+    </form>
+  </div>
+</body>
