@@ -1,7 +1,7 @@
 # Uploader
 Go Gin, upload a file with field then save it on the server
 
-## Why
+## why
 it's nice to have a server who can upload then run some routine on his side
 
 ## what
@@ -12,3 +12,4 @@ it's nice to have a server who can upload then run some routine on his side
 ```bash
 go run myuploader.go
 ```
+atom  

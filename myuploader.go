@@ -10,14 +10,20 @@ import (
 
 func main() {
 	router := gin.Default()
-	// Set a lower memory limit for multipart forms (default is 32 MiB)
-	// router.MaxMultipartMemory = 8 << 20 // 8 MiB
+
+	// index.html
 	router.Static("/", "./public")
+
+	// 404
+	router.NoRoute(func(c *gin.Context) {
+	    c.JSON(404, gin.H{"code": "404", "message": "Page not found"})
+	})
+
+	// request
 	router.POST("/upload", func(c *gin.Context) {
 		name := c.PostForm("name")
 		email := c.PostForm("email")
 
-		// Source
 		file, err := c.FormFile("file")
 		if err != nil {
 			c.String(http.StatusBadRequest, fmt.Sprintf("get form err: %s", err.Error()))
